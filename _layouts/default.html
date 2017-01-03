@@ -4,27 +4,14 @@
 {% include head.html %}
 
 <body>
-  <header {% if page.spacious %} class="spacious" {% endif %}>
-    {% include header.html %}
+  <header class="main{% if page.spacious %} spacious{% endif %}">
+      {% include header.html %}
   </header>
 
     <!-- begin:home -->
     <main class="container">
-
         {{content}}
-
-        <ul class="post-list">
-          {% for post in site.posts %}
-            <li>
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-              <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-              </h2>
-            </li>
-          {% endfor %}
-        </ul>
-    </section>
+    </main>
 
     {% include footer.html %}
 </body>

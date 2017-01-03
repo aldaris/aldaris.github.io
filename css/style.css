@@ -3,22 +3,6 @@ html {
     font-size: 62.5%;
 }
 
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
-    header.spacious>div {
-        display: none;
-        /*padding: 2rem 0;*/
-    }
-    header:not(.spacious)>div {
-        display: none;
-    }
-    header.spacious h2 {
-        display: none;
-    }
-}
-
 @media screen and (min-width: 300px) {
     .container>.navbar-header {
         float: left;
@@ -26,8 +10,20 @@ html {
     .navbar-right {
         float: right !important;
     }
-    header.spacious {
-        text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    header.spacious>div {
+        display: none;
+    }
+    header:not(.spacious)>div {
+        display: none;
+    }
+    header.spacious h2 {
+        display: none;
     }
 }
 
@@ -47,13 +43,14 @@ html {
     }
 }
 
-header {
+header.main {
     background-color: #159957;
     background-image: linear-gradient(120deg, #155799, #159957);
     border: 0px;
     border-radius: 0px;
     color: #fff;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 header.spacious h1 {
