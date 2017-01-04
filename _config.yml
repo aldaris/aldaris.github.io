@@ -15,15 +15,18 @@
 # in the templates via {{ site.myvariable }}.
 title: Unsolicited feedback
 email: majorpetya@gmail.com
-description: >
-  Random thoughts for your amusement.
+description: Random thoughts for your amusement
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: majorpetya
-github_username:  aldaris
+github_username: aldaris
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlight: rouge
 gems:
   - jekyll-feed
 exclude:
