@@ -3,6 +3,17 @@ html {
     font-size: 62.5%;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+div.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
 @media screen and (min-width: 300px) {
     .container>.navbar-header {
         float: left;
@@ -81,4 +92,22 @@ header.spacious a.btn {
 .navbar a:hover {
     color: #0bdbfb;
     background-color: transparent !important;
+}
+
+main {
+    padding-bottom: 8rem;
+}
+
+footer.main {
+    background-color: #eaeaea;
+    height: 8rem;
+    margin-top: 4rem;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    border-top: 1px solid #d0d0d0;
+}
+
+footer>div {
+    padding-top: 1rem;
 }

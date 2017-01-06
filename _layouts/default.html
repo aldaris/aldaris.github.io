@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-{% include head.html %}
-
-<body>
-  <header class="main{% if page.spacious %} spacious{% endif %}">
-      {% include header.html %}
-  </header>
-
-    <!-- begin:home -->
-    <main class="container">
+  {% include head.html %}
+  <body>
+    <div class="wrapper">
+      <header class="main{% if page.spacious %} spacious{% endif %}">
+        {% include header.html %}
+      </header>
+      <main class="container">
         {{content}}
-    </main>
-
-    {% include footer.html %}
-</body>
+      </main>
+      {% include footer.html %}
+    </div>
+  </body>
 </html>
