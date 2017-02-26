@@ -1,9 +1,9 @@
 html {
-    font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
 }
 
 html, body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -96,6 +96,10 @@ header.spacious a.btn {
 
 main {
     padding-bottom: 8rem;
+}
+
+div.post-excerpt {
+    font-style: italic;
 }
 
 footer.main {
