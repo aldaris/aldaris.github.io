@@ -106,8 +106,20 @@ footer.main {
     width: 100%;
     position: absolute;
     border-top: 1px solid #d0d0d0;
+    text-align: center;
+    padding-top: 1.5rem;
 }
 
 footer>div {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
+}
+
+footer.main a {
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+footer.main a:hover {
+    color: #555555;
 }
