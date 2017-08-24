@@ -85,6 +85,10 @@ header.spacious a.btn {
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
+header.post-header {
+    margin-bottom: 40px;
+}
+
 .navbar a {
     color: #fff;
 }
@@ -96,10 +100,15 @@ header.spacious a.btn {
 
 main {
     padding-bottom: 8rem;
+    max-width: 750px;
 }
 
 div.post-excerpt {
     font-style: italic;
+}
+
+p.post-date {
+    color: #777777;
 }
 
 footer.main {

@@ -13,6 +13,7 @@ It turns out that the pressure relief valve on Worcester 24CDi models can be fou
 Once the pressure was relieved, and the pressure level went down to the normal 1.3 bar, everything seemed okay, and we felt relief ourselves as well. Later on during that day we've seen that the water pressure has dropped now below 1.3 bar, and it seems to continuously drop over time. After refilling the tank a couple of times, we came to the conclusion that now we have a leak, and it is really time to call a gas engineer.
 
 **Lessons learned**:
+
 * the water pressure is actually perfectly fine around 2 bars, and usually the boilers are configured to automatically relief the extra pressure at ~3 bars
 * when the pressure relief valve is used, quite often the relief valve won't shut properly afterwards, causing a leak
 * boilers tend to have a failsafe for too low pressure as well: in such scenarios they just never actually turn themselves on.
