@@ -166,3 +166,7 @@ A different solution for this would be to change the invoking code so that it co
 ### Takeaway
 
 My key takeaway from all of this is that I wouldn't want to use Tomcat 7.0.15+ and Tomcat 8.0.x versions in production environments, because it can randomly fail to handle incoming requests.
+
+#### UPDATE
+
+The bug is now fixed in both Tomcat [7.0.x](http://svn.apache.org/viewvc?view=revision&revision=1806734) and [8.0.x](http://svn.apache.org/viewvc?view=revision&revision=1806733) and should make its way into Tomcat 7.0.82 and Tomcat 8.0.47.
