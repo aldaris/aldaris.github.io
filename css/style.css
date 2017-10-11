@@ -103,7 +103,7 @@ div.post-excerpt {
     font-style: italic;
 }
 
-p {
+p, li {
     line-height: 1.7rem;
 }
 
