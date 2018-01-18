@@ -76,7 +76,22 @@ $("#foo").on("keypress", function(event) {
 });
 ```
 
+**UPDATE: A colleague of mine has [pointed out][html5] that it is also possible to use the HTML5 number input type to achieve the same goal, A working example for that would look something like this:**
+
+```html
+<input type="number" name="creditcard" />
+```
+
+```css
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+```
+
 [keydown keypress difference]: https://stackoverflow.com/a/3396790
 [not character codes]: https://stackoverflow.com/a/9350415
 [keycode deprecated]: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 [caniuse]: https://caniuse.com/#feat=keyboardevent-key
+[html5]: https://twitter.com/misterpotes/status/952811059282350080
