@@ -31,4 +31,14 @@ Now of course this can result in better search results and better post
 
 Am I being paranoid? Would you not consider this as violation of your privacy? Let me know in the comments section.
 
+**UPDATE**:
+
+Stack Overflow [replied] to my tweet and explained a few things:
+* The user ID is there so that people can collect certain sharing related [badges] in StackOverflow.
+* There is actually a text displayed to the end-user that explains that the link contains the user ID when you click on share (really not sure how I missed this!)
+
+Great to see that Stack Overflow is using their development blog to explain their features and decisions, wish this would be more common...
+
 [last post]: https://aldaris.github.io/dev/js/2018/01/14/credit-card-number-validation-done-wrong.html
+[replied]: https://twitter.com/StackOverflow/status/955846295683346432
+[badges]: https://stackoverflow.blog/2010/09/09/announcer-booster-and-publicist-badges/
