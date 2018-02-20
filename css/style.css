@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -81,6 +81,10 @@ header.post-header {
     margin-bottom: 2rem;
 }
 
+a {
+  color: #009bff;
+}
+
 .navbar a {
     color: #fff;
 }
@@ -97,6 +101,9 @@ main {
 
 pre {
     margin: 1rem 0 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
 }
 
 div.post-excerpt {
