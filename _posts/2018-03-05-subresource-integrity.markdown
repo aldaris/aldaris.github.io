@@ -4,9 +4,9 @@ title:  "Subresource integrity"
 date:   2018-03-05 07:00:00 +0000
 categories: dev security
 ---
-Just past month there was a slightly disturbing story unfolding: Browsealoud, a commonly used accessibility service (also used by several government websites) has been hacked and JavaScript code was injected into their service. The story itself can be found [here][motherboard], but if you want to read the security researcher's view of the subject, then I would suggest to check out [Scott Helme]'s and [Troy Hunt]'s excellent summaries as well.
+Just this last month there was a slightly disturbing story unfolding: Browsealoud, a commonly used accessibility service (also used by several government websites) has been hacked and JavaScript code was injected into their service. The story itself can be found [here][motherboard], but if you want to read the security researcher's view of the subject, then I would suggest to check out [Scott Helme]'s and [Troy Hunt]'s excellent summaries as well.
 
-The common takeaway from Scott and Troy appears to be that [Content Security Policy][CSP] (CSP) and [Subresource Integrity] (SRI) would have prevented this hack from happening. In the followings I will try to share as much information as I can about SRI and how it can be leveraged via CSP, and describe how these technologies can be used to prevent issues like above.
+The common takeaway from Scott and Troy appears to be that [Content Security Policy][CSP] (CSP) and [Subresource Integrity] (SRI) would have prevented this hack from happening. In the following I will try to share as much information as I can about SRI and how it can be leveraged via CSP, and describe how these technologies can be used to prevent issues like above.
 
 ### The basic concept of SRI
 
@@ -29,7 +29,7 @@ If the referenced JavaScript or CSS file has a different hash than what can be f
 The validation process is pretty well defined in the spec fortunately, but here is the gist of it:
 
 * The browsers should pick the strongest algorithm they support from the listed values.
-* If there are multiple hashes with the same algorithm, the validation will succeed as long as one of the values is matching.
+* If there are multiple hashes with the same algorithm, the validation will succeed as long as one of the values matches.
 
 ### SRI validation and same-origin policy
 
@@ -53,7 +53,7 @@ Note that inline resources are never validated for their integrity.
 
 To ensure that cross-origin resources are validated correctly for your site, make sure that the relevant `script` and `link` tags have the [crossorigin] attribute with the appropriate value defined.
 
-One thing to note here is that whilst the same origin requirement is very handy from security point of view, it also adds an additional constraint on CDN providers. Application developers may also not be able to leverage the integrity attribute until their third party providers set up CORS on their servers (the alternative is to self-host the resource, which is not always viable).
+One thing to note here is that while the same origin requirement is very handy from security point of view, it also adds an additional constraint on CDN providers. Application developers may also not be able to leverage the integrity attribute until their third party providers set up CORS on their servers (the alternative is to self-host the resource, which is not always viable).
 
 ### Handling integrity validation errors
 
@@ -64,7 +64,7 @@ The integrity validation should succeed in the vast majority of the cases, howev
 * the resource is compromised
 * there is an [optimizing proxy] changing HTTP responses
 
-In any of these scenarios it is helpful to have a fallback mechanism to still load the resources your web application requires. As I was locally testing this out I've found that this part of the SRI support is not really that solid, and there are lots of different concerns that needs to be taken into account. In the following subsections you can find the different issues I have faced as I was trying to implement fallback.
+In any of these scenarios it is helpful to have a fallback mechanism to still load the resources your web application requires. As I was locally testing this out I've found that this part of the SRI support is not really that solid, and there are lots of different concerns that need to be taken into account. In the following subsections you can find the different issues I have faced as I was trying to implement fallback.
 
 #### There is no global event for validation failure
 
@@ -256,7 +256,7 @@ The second problem is that loading scripts with `getScript` requires a bit more 
 
 #### Issues with third parties
 
-Unfortunately not all third party services wants to support integrity verifications, one such example is [Google Fonts]. In their case the resources returned at their endpoints can be different depending on what type of browser was used to make the request and versioning the resources appeared to be too much of an overhead for them. Other than self-hosting these resources, there isn't much else that can be done unfortunately.
+Unfortunately not all third party services want to support integrity verifications, one such example is [Google Fonts]. In their case the resources returned at their endpoints can be different depending on what type of browser was used to make the request and versioning the resources appeared to be too much of an overhead for them. Other than self-hosting these resources, there isn't much else that can be done unfortunately.
 
 ### TL;DR I want SRI now, what do I need to do?
 
