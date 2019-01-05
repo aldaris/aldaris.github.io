@@ -27,7 +27,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 highlight: rouge
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
