@@ -17,8 +17,8 @@ title: Life and everything else
 email: majorpetya@gmail.com
 description: Random stories for your amusement
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: majorpetya
+url: "https://blog.aldaris.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+bluesky_username: majorpetya
 github_username: aldaris
 
 # Build settings

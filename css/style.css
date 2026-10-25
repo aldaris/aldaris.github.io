@@ -142,3 +142,7 @@ footer.main a {
 footer.main a:hover {
     color: #555555;
 }
+
+.footer-logo {
+    width: 28px;
+}
