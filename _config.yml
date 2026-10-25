@@ -29,6 +29,3 @@ kramdown:
 highlight: rouge
 plugins:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
